@@ -113,6 +113,11 @@ namespace Unibas.DBIS.VREP
         private void Update() {
             if (Input.GetKey(KeyCode.F12)) {
                 _exhibitionManager.RestoreExhibits();
+                var go = GameObject.FindWithTag("Player");
+                if (go != null)
+                {
+                    go.transform.position = new Vector3(0, 0, 0);
+                }
             }
         }
 
